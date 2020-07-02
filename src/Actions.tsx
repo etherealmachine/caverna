@@ -4,7 +4,7 @@ import Caverna from './Caverna';
 
 export default () => {
   return (
-    <div>
+    <div className="d-flex flex-row flex-wrap">
       {Object.entries(Caverna.actions).map(([name, entity]) => <div className="card">
         <div className="card-body">
           <h5 className="card-title">{name}</h5>

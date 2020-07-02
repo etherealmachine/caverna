@@ -16,8 +16,10 @@ export default () => {
       <FurnishingTiles />
       <Actions />
       <Expedition />
-      <Forest />
-      <Mountain />
+      <div className="d-flex flex-row">
+        <Forest />
+        <Mountain />
+      </div>
     </div>
   );
 }
