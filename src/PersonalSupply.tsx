@@ -1,24 +1,13 @@
 import React from 'react';
 
-export default () => {
+import Caverna from './Caverna';
+
+export default (props: { game: Caverna }) => {
   return (
     <div>
-      <div>
-        <label htmlFor="grain">Grain</label>
-        <input type="number" name="grain" value="0" />
-      </div>
-      <div>
-        <label htmlFor="vegetables">Vegetables</label>
-        <input type="number" name="vegetables" value="0" />
-      </div>
-      <div>
-        <label htmlFor="food">Food</label>
-        <input type="number" name="grain" value="0" />
-      </div>
-      <div>
-        <label htmlFor="rubies">Rubies</label>
-        <input type="number" name="rubies" value="0" />
-      </div>
+      {Object.entries(props.game.resources['Personal Supply']).map(([name, count]) => <div key={name}>
+        <span>{name.toUpperCase()}: {count}</span>
+      </div>)}
     </div>
   );
 }
