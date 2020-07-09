@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Caverna from './Caverna';
+import { State } from './Caverna';
 
-export default (props: { game: Caverna }) => {
+export default (props: { game: State }) => {
   return (
     <div>
       {Object.entries(props.game.dwarves).map(([name, entity]) => <div key={name}>{name}</div>)}

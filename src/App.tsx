@@ -7,10 +7,12 @@ import Actions from './Actions';
 import Expedition from './Expedition';
 import Forest from './Forest';
 import Mountain from './Mountain';
-import Caverna from './Caverna';
+
+import { InitialState, setOnChange } from './Caverna';
 
 export default () => {
-  const [game, setGame] = useState(new Caverna());
+  const [game, setGame] = useState(InitialState);
+  setOnChange(setGame);
   return (
     <div>
       <PersonalSupply game={game} />

@@ -1,6 +1,7 @@
-export default class Caverna {
+import produce from 'immer'
 
-  dwarves = {
+export const InitialState = {
+  dwarves: {
     'First Dwarf': {
       weapon: 0,
       location: 'Cavern00',
@@ -21,9 +22,8 @@ export default class Caverna {
     'Sixth Dwarf': {
       weapon: 0,
     },
-  }
-
-  resources = {
+  },
+  resources: {
     'Personal Supply': {
       food: 2,
       gold: 0,
@@ -34,9 +34,8 @@ export default class Caverna {
       grain: 0,
       vegetables: 0,
     },
-  }
-
-  animals = {
+  },
+  animals: {
     'Dog': {
       animal: true,
       fertile: false,
@@ -61,9 +60,8 @@ export default class Caverna {
       gold: 2,
       food: 1.5,
     }
-  }
-
-  actions = {
+  },
+  actions: {
     'Logging': {
       description: 'Take Wood and then/or Go on an Expedition',
       refill: [
@@ -167,9 +165,8 @@ export default class Caverna {
     'Ruby Delivery': {
       description: 'Take Ruby, Take 1 Ruby is you have at least 2 Ruby Mines',
     },
-  }
-
-  furnishing_tiles = {
+  },
+  furnishing_tiles: {
     'Dwelling': {
       description: 'Room for 1 Dwarf',
       cost: {
@@ -225,9 +222,8 @@ export default class Caverna {
       points: 5,
       dwarf_space: 'Sixth Dwarf',
     },
-  }
-
-  expedition_loot = {
+  },
+  expedition_loot: {
     'All Weapons +1': {
       level: 1,
     },
@@ -279,7 +275,18 @@ export default class Caverna {
       amount: 1,
     },
   }
+}
 
-  constructor() {
-  }
+export type State = typeof InitialState;
+
+export let onChange: (game: typeof InitialState) => void;
+
+export function setOnChange(f: (game: State) => void) {
+  onChange = f;
+}
+
+export function performAction(game: State, name: string, entity: object) {
+  onChange(produce(game, (game: State) => {
+    game.resources['Personal Supply'].food += 1;
+  }));
 }
