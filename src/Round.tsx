@@ -1,7 +1,6 @@
+import React from 'react'
 
-import React from 'react';
-
-import { State } from './Caverna';
+import { State } from './Caverna'
 
 export default (props: { game: State }) => {
   return (

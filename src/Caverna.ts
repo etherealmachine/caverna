@@ -311,6 +311,274 @@ export const InitialState = {
       points: 5,
       dwarf_space: 'Sixth Dwarf',
     },
+    'Carpenter': {
+      description: 'Every time you furnish a Cavern or build Fences, you receive a discount of 1 Wood',
+      cost: {
+        stone: 1,
+      },
+      points: 0,
+    },
+    'Stone Carver': {
+      description: 'Receive 2 Stone immediately. Every time you furnish a Cavern or build a Stable you receive a discount of 1 Stone',
+      cost: {
+        wood: 1,
+      },
+      points: 1,
+    },
+    'Blacksmith': {
+      description: 'Receive 2 Ore immediately. Every time you forge a Weapon, you receive a discount of 2 Ore',
+      cost: {
+        wood: 1,
+        stone: 2,
+      },
+      points: 3,
+    },
+    'Miner': {
+      description: 'At the beginning of each round, receive 1 Ore per Donkey in an Ore Mine',
+      cost: {
+        wood: 1,
+        stone: 1
+      },
+      points: 3,
+    },
+    'Builder': {
+      description: 'You may replace 1 Wood with 1 Ore and/or 1 Stone with 1 Ore when paying for a Furnishing tile',
+      cost: {
+        stone: 1,
+      },
+      points: 2,
+    },
+    'Trader': {
+      description: 'At any time before scoring, exchange 2 Gold for 1 Ore, 1 Stone, and 1 Wood',
+      cost: {
+        wood: 1,
+      },
+      points: 2,
+    },
+    'Cuddle Room': {
+      description: 'Room for as many Sheep as you have Dwarves',
+      cost: {
+        wood: 1,
+      },
+      points: 2,
+    },
+    'Breakfast Room': {
+      description: 'Room for up to 3 Cows',
+      cost: {
+        wood: 1,
+      },
+      points: 0,
+    },
+    'Stubble Room': {
+      description: 'You may keep 1 Farm animal on each empty Field',
+      cost: {
+        wood: 1,
+        ore: 1
+      },
+      points: 1,
+    },
+    'Work Room': {
+      description: 'You may furnish a Tunnel and Deep Tunnel',
+      cost: {
+        stone: 1
+      },
+      points: 2,
+    },
+    'Guest Room': {
+      description: 'Either/Or becomes And/Or for you',
+      cost: {
+        wood: 1,
+        stone: 1
+      },
+      points: 0,
+    },
+    'Office Room': {
+      description: 'Twin tiles may overhang: every time you do so receive 2 Gold',
+      cost: {
+        stone: 1
+      },
+      points: 0,
+    },
+    'Wood Supplier': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Stone Supplier': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Ruby Supplier': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Dog School': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Quarry': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Seam': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Slaughtering Cave': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Cooking Cave': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Working Cave': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Mining Cave': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Breeding Cave': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Peaceful Cave': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Stone Storage': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Ore Storage': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Spare Part Storage': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Main Storage': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Weapon Storage': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Supplies Storage': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Weaving Parlor': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Milking Parlor': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'State Parlor': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Hunting Parlor': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Beer Parlor': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Blacksmithing Parlor': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Broom Chamber': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Treasure Chamber': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Food Chamber': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Prayer Chamber': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Writing Chamber': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
+    'Fodder Chamber': {
+      description: '',
+      cost: {
+      },
+      points: 0,
+    },
   },
   expedition_loot: {
     'All Weapons +1': {
