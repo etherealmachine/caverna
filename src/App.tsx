@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import Round from './Round';
 import PersonalSupply from './PersonalSupply';
 import Dwarves from './Dwarves';
 import FurnishingTiles from './FurnishingTiles';
@@ -15,6 +16,7 @@ export default () => {
   setOnChange(setGame);
   return (
     <div>
+      <Round game={game} />
       <PersonalSupply game={game} />
       <Dwarves game={game} />
       <FurnishingTiles game={game} />
