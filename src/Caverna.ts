@@ -63,7 +63,7 @@ export const InitialState = {
   },
   actions: {
     'Logging': {
-      description: 'Take Wood and then/or Go on an Expedition',
+      description: (self: any) => `Take ${self.wood} Wood and then/or Go on an Expedition`,
       refill: [
         {
           resource: 'wood',
@@ -71,29 +71,34 @@ export const InitialState = {
           incremental: 1,
         }
       ],
+      wood: 0,
     },
     'Wood Gathering': {
-      description: 'Take Wood',
+      description: (self: any) => `Take ${self.wood} Wood`,
       refill: [
         {
           resource: 'wood',
           initial: 1,
           incremental: 1,
+          current: 0,
         }
       ],
+      wood: 0,
     },
     'Excavation': {
-      description: 'Take Stone and/or Place a Cavern/Cavern or Tunnel/Cavern Tile',
+      description: (self: any) => `Take ${self.stone} Stone and/or Place a Cavern/Cavern or Tunnel/Cavern Tile`,
       refill: [
         {
           resource: 'stone',
           initial: 1,
           incremental: 1,
+          current: 0,
         }
       ],
+      stone: 0,
     },
     'Ore Mining': {
-      description: 'Take Ore, +2 Ore for each Ore Mine',
+      description: (self: any) => `Take ${self.ore} Ore, +2 Ore for each Ore Mine`,
       refill: [
         {
           resource: 'ore',
@@ -101,19 +106,22 @@ export const InitialState = {
           incremental: 1,
         }
       ],
+      ore: 0,
       bonus: {
         resource: 'ore',
         requirements: 'Ore Mine',
+        amount: 2,
         foreach: true,
       },
     },
     'Sustenance': {
-      description: 'Take Food and 1 Grain and/or Place a Meadow/Field Tile',
+      description: (self: any) => `Take ${self.food} Food and 1 Grain and/or Place a Meadow/Field Tile`,
       refill: [
         {
           resource: 'food',
           initial: 1,
           incremental: 1,
+          current: 0,
         }
       ],
       bonus: {
@@ -121,7 +129,21 @@ export const InitialState = {
       },
     },
     'Ruby Mining': {
-      description: 'Take Ruby, +1 Ruby if you have at least 1 Ruby Mine',
+      description: (self: any) => `Take ${self.ruby} Ruby, +1 Ruby if you have at least 1 Ruby Mine`,
+      refill: [
+        {
+          resource: 'ruby',
+          initial: 1,
+          incremental: 1,
+          current: 0,
+        }
+      ],
+      bonus: {
+        resource: 'ruby',
+        requirements: 'Ruby Mine',
+        amount: 1,
+        foreach: false,
+      },
     },
     'Housework': {
       description: 'Take 1 Dog and/or Furnish a Cavern',
@@ -287,6 +309,5 @@ export function setOnChange(f: (game: State) => void) {
 
 export function performAction(game: State, name: string, entity: object) {
   onChange(produce(game, (game: State) => {
-    game.resources['Personal Supply'].food += 1;
   }));
 }
