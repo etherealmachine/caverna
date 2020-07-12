@@ -4,12 +4,12 @@ export const InitialState = {
   dwarves: {
     'First Dwarf': {
       weapon: 0,
-      location: 'Cavern00',
+      location: 'mountain03',
       born_on: 0,
     },
     'Second Dwarf': {
       weapon: 0,
-      location: 'Cavern00',
+      location: 'mountain03',
       born_on: 0,
     },
     'Third Dwarf': {
@@ -689,7 +689,19 @@ export const InitialState = {
       level: 14,
       type: 'action',
     },
-  }
+  },
+  forest: [
+    [{}, {}, {}],
+    [{}, {}, {}],
+    [{}, {}, {}],
+    [{}, {}, {}],
+  ],
+  mountain: [
+    [{}, {}, {}],
+    [{}, {}, {}],
+    [{}, {}, {}],
+    [{ name: 'Entry-Level Dwelling' }, {}, {}],
+  ],
 }
 
 export type State = typeof InitialState;

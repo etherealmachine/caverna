@@ -1,28 +1,24 @@
 import React from 'react'
+import styled from 'styled-components'
 
-export default () => {
+import { State } from './Caverna'
+
+const Space = styled.td`
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-collapse: collapse;
+`
+
+export default (props: { game: State }) => {
   return (
-    <div className="d-flex flex-column">
-      <div className="d-flex flex-row">
-        <div>00</div>
-        <div>10</div>
-        <div>20</div>
-      </div>
-      <div className="d-flex flex-row">
-        <div>01</div>
-        <div>11</div>
-        <div>21</div>
-      </div>
-      <div className="d-flex flex-row">
-        <div>02</div>
-        <div>12</div>
-        <div>22</div>
-      </div>
-      <div className="d-flex flex-row">
-        <div>03</div>
-        <div>13</div>
-        <div>23</div>
-      </div>
-    </div>
+    <table style={{ border: '1px solid black', borderCollapse: 'collapse' }}>
+      <tbody>
+        {props.game.forest.map((rows, rowNo) => <tr key={rowNo} className="d-flex flex-row">
+          {rows.map((space, colNo) => <Space key={colNo}>
+          </Space>)}
+        </tr>)}
+      </tbody>
+    </table>
   );
 }

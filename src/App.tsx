@@ -23,8 +23,8 @@ export default () => {
       <Actions game={game} />
       <Expedition game={game} />
       <div className="d-flex flex-row">
-        <Forest />
-        <Mountain />
+        <Forest game={game} />
+        <Mountain game={game} />
       </div>
     </div>
   );

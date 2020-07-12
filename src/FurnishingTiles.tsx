@@ -25,6 +25,7 @@ export default (props: { game: State }) => {
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
             <p className="card-text">{entity.description}</p>
+            <button>Build</button>
           </div>
         </Tile>)}
       </div>
