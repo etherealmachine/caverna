@@ -5,22 +5,28 @@ export const InitialState = {
     'First Dwarf': {
       weapon: 0,
       location: 'Cavern00',
+      born_on: 0,
     },
     'Second Dwarf': {
       weapon: 0,
       location: 'Cavern00',
+      born_on: 0,
     },
     'Third Dwarf': {
       weapon: 0,
+      born_on: undefined,
     },
     'Fourth Dwarf': {
       weapon: 0,
+      born_on: undefined,
     },
     'Fifth Dwarf': {
       weapon: 0,
+      born_on: undefined,
     },
     'Sixth Dwarf': {
       weapon: 0,
+      born_on: undefined,
     },
   },
   resources: {
